@@ -27,7 +27,7 @@ import java.io.ObjectOutputStream;
             oos.writeObject(timeStamp);
             oos.close();
 
-            FileInputStream fstream = new FileInputStream("temp.data");
+            FileInputStream fstream =new FileInputStream("temp.data");
             ObjectInputStream ostream = new ObjectInputStream(fstream);
             TimeStamp outputStamp = (TimeStamp)ostream.readObject();
             System.out.println(outputStamp.toString());
