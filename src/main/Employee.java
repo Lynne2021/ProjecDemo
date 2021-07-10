@@ -1,10 +1,14 @@
+package main;
+
 /**
- *  Employees personal data in java.ca.
+ * Employees personal data in java.ca;
+ * to process employee data;
  *
- * @author Hong lin, XiaoMing Guo
+ * @author HongLin, XiaomingSu
  * @version 1.0
  * @since 2021-7-10
  */
+
 public class Employee {
     private int empNo;
     private String firstName;
@@ -66,7 +70,7 @@ public class Employee {
     }
     @Override
     public String toString() {
-        return "Employee [empNo=" + empNo + ", firstName=" + firstName + ", lastName=" + lastName + ", hourRate="
+        return "main.Employee [empNo=" + empNo + ", firstName=" + firstName + ", lastName=" + lastName + ", hourRate="
                 + hourRate + "]";
     }
 }

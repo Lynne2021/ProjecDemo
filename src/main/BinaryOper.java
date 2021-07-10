@@ -1,7 +1,9 @@
+package main;
 /**
- * A Binary Class to read and write Binary files in java.ca
+ * A Binary Class to read and write Binary files in java.ca;
+ * to process data via binary operation;
  *
- * @author HongLin, XiaoMingSu
+ * @author HongLin, XiaomingSu
  * @version 1.0
  * @since 2021-07-10
  */

@@ -1,7 +1,10 @@
+package main;
+
 /**
- * A time stamp for time data in java.ca
+ * A time stamp for time data in java.ca;
+ * to process timestamp data;
  *
- * @author HongLIn  XiaoMingSu
+ * @author HongLin, XiaomingSu
  * @version 1.0
  * @since 2021-07-10
  */
@@ -30,7 +33,7 @@ public class TimeStamp {
     }
     @Override
     public String toString() {
-        return "TimeStamp [empNo=" + empNo + ", timeStamp=" + timeStamp + "]";
+        return "main.TimeStamp [empNo=" + empNo + ", timeStamp=" + timeStamp + "]";
     }
 }
 

@@ -1,4 +1,4 @@
-1 Employee class
+1 main.Employee class
 	a five instance variable with get/set method
 		int empNo;
 		String firstName;
@@ -19,7 +19,7 @@
 	input: ArrayList employeeList, String fileName
 	output: boolean
 	description: read data from employee.txt one by one;
-							 split one line and initialize Employee object;
+							 split one line and initialize main.Employee object;
 							 add employee object to list
 	
 	code: read employees.txt
@@ -34,13 +34,13 @@
 	description: add time worked into employee list by employee no.
 	code: read employeesHours.txt
 				loop
-						TimeStamp = TimeStamp (empNo,time worked);
-						call function addTimeWorkedToEmployee(employeelist, empNo, TimeStamp)
+						main.TimeStamp = main.TimeStamp (empNo,time worked);
+						call function addTimeWorkedToEmployee(employeelist, empNo, main.TimeStamp)
 				end;
 				return true;
 5 addTimeWorkedToEmployee
-	input: ArrayList<Employee> employeeList, int employeeNumber,
-			TimeStamp timeWorked
+	input: ArrayList<main.Employee> employeeList, int employeeNumber,
+			main.TimeStamp timeWorked
 	output: boolean
 	description: add time worked into employee
 	code: loop employee list

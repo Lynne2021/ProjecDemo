@@ -1,7 +1,9 @@
+package main;
 /**
- * A test class what test the result for all classes in java.ca
+ * main class of management for all classes in java.ca;
+ * to process original data and return result;
  *
- * @author HongLin, XiaoMingSu
+ * @author HongLin, XiaomingSu
  * @version 1.0
  * @since 2021-07-10
  */
@@ -9,8 +11,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
+
+
+
 
     public class EmployeeManagement {
         /**
@@ -19,27 +23,27 @@ import java.util.Scanner;
          */
         public static void main(String[] args) {
             ArrayList<Employee> empList = new ArrayList<Employee>();
-            generateEmployeeListFromFile(empList, "employees.txt");
-            processTimeWorkedFile(empList, "employeesHours.txt");
+            generateEmployeeListFromFile(empList, "./data/employees.txt");
+            processTimeWorkedFile(empList, "./data/employeesHours.txt");
             //create menu
             Scanner choose = new Scanner(System.in);
             while(true) {
-                System.out.println("======please input================\n0 exit \n1 employeeNumberOrder\n2 nameOrder\n3 timeOrder\n4 payOrder\n=====================");
+                System.out.println("======please input======\n0 exit \n1 employeeNumberOrder\n2 nameOrder\n3 timeOrder\n4 payOrder\n=====================");
                 String choice = choose.next();
                 if("0".equalsIgnoreCase(choice)) {
                     break;
                 }else if("1".equalsIgnoreCase(choice)) {
                     empList.sort(Comparators.NUMBER);
-                    printReport(empList, "employeeNumberOrder.txt");
+                    printReport(empList, "./output/employeeNumberOrder.txt");
                 }else if("2".equalsIgnoreCase(choice)) {
                     empList.sort(Comparators.NAME);
-                    printReport(empList, "nameOrder.txt");
+                    printReport(empList, "./output/nameOrder.txt");
                 }else if("3".equalsIgnoreCase(choice)) {
                     empList.sort(Comparators.TIME);
-                    printReport(empList, "timeOrder.txt");
+                    printReport(empList, "./output/timeOrder.txt");
                 }else if("4".equalsIgnoreCase(choice)) {
                     empList.sort(Comparators.PAY);
-                    printReport(empList, "payOrder.txt");
+                    printReport(empList, "./output/payOrder.txt");
                 }
             }
             choose.close();
@@ -48,7 +52,7 @@ import java.util.Scanner;
 
         /**
          * read data from employee.txt one by one;
-         * split one line and initialize Employee object;
+         * split one line and initialize main.Employee object;
          * add employee object to list
          *
          * @param employeeList ArrayList
@@ -159,7 +163,7 @@ import java.util.Scanner;
          *
          * @param employeeList ArrayList
          * @param employeeNumber int
-         * @param timeWorked TimeStamp
+         * @param timeWorked main.TimeStamp
          * @return boolean
          *
          * */

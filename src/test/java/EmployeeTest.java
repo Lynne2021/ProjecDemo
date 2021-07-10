@@ -1,5 +1,7 @@
+import main.Employee;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
 public class EmployeeTest {
     @Test
    public void testGetEmpNo() {
@@ -44,6 +46,18 @@ public class EmployeeTest {
         Employee E = new Employee(6,"Yang","Yun",20.0);
         E.setHourRate(18);
         assertEquals(18,E.getHourRate());
+    }
+
+    @Test
+    public void testGetTimeWorked() {
+        Employee E = new Employee(14,"Li","David",27.0);
+        assertEquals(27.0,E.getTimeWorked());
+    }
+    @Test
+    public void testSetTimeWorked() {
+        Employee E = new Employee(6, "Yang", "Yun", 20.0);
+        E.setTimeWorked(18);
+        assertEquals(18, E.getTimeWorked());
     }
 
 
